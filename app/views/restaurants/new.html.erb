@@ -1,0 +1,15 @@
+<h2 class="mt-2">Add a new restaurant 😁</h2>
+
+<div class="w-5">
+  <%= simple_form_for @restaurant do |f| %>
+    <%= f.input :name %>
+    <%= f.input :address %>
+    <%= f.input :phone_number %>
+    <%= f.input :category, :collection => ["Chinese", "Italian", "Japanese", "French", "Belgian"] %>
+    <%= f.submit class:"btn btn-success mt-2"%>
+  <% end %>
+
+  <button class="btn btn-success">
+    <%= link_to "🔙 To Restaurants", restaurants_path, class:"text-decoration-none text-white" %>
+  </button>
+</div>
